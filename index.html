@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RNG picker</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Sander 2IKT-SK 2019/2020">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#1D1D1D">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#1D1D1D">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1D1D1D">
+
+	<link rel="stylesheet" id="style" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--
+	-->
+<script defer src="js/main.js"></script>
+<script defer src="js/quotes.js"></script>
+
+</head>
+<body onload="landing()">
+	<div class="sidebar">
+		<div class="title">
+			<span class="fifty">Fravær</span>
+			<span class="fifty">Score</span>
+		</div>
+		<div class="info">
+			<div class="fraver fifty">
+				<ul>
+
+				</ul>
+			</div>
+			<div class="poeng fifty">
+				<ul>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<main>
+		<a href="javascript:void(0)" class="button" onclick="runRNG()">Trykk her for å bli skuffa!</a>
+		<span class="name">
+
+		</span>
+		<p class="quote">
+
+
+		</p>
+		<div class="modes">
+			<div class="modes">
+				Moduser: 
+				<a href="plasser.html" class="reset button" onclick="">Plasser</a>
+				<a href="index.html" class="reset button active" onclick="typeTing('random')">Random</a>
+				<a href="javascript:void(0)" class="reset button" onclick="typeTing('order')">Rekkefølge</a>
+			</div>
+
+			<div class="modes">
+				Farger: 
+				<a href="javascript:void(0)" class="reset" onclick="fargeMode('hvit')">Hvit</a>
+				<a href="javascript:void(0)" class="reset" onclick="fargeMode('svart')">Svart</a>
+				<a href="javascript:void(0)" class="reset" onclick="fargeMode('rosa')">Rosa</a>
+			</div>
+		</div>
+	</main>
+
+	<div class="antall">
+		<div class="title">
+				<div class="poeng">
+					<a href="javascript:void(0)" class="button" onclick="minusAntall()">-</a>
+					<a href="javascript:void(0)" class="button" onclick="plussAntall()">+</a>
+				</div>
+				<span>Recent</span>
+		</div>
+		<div class="hidden" id=trekkninger></div>
+		<div class="recent">
+			<ol>
+
+			</ol>
+		</div>
+		<a href="javascript:void(0)" class="reset button" onclick="resetRecent()">Reset</a>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RNG picker</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Sander 2IKT-SK 2019/2020">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#1D1D1D">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#1D1D1D">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1D1D1D">
+
+	<link rel="stylesheet" id="style" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--
+	-->
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body onload="landing()">
+	<div class="sidebar fat">
+		<div class="title">
+			<span>Plasser</span>
+		</div>
+		<div class="info">
+			<a href="javascript:void(0)" class="button plassRun" onclick="runPlassRNG('2')">Trykk her for å bli skuffa!</a>
+		</div>
+		<div class="info">
+			<a href="javascript:void(0)" class="groupings" onclick="plassGrouping('1')">en og en</a>
+		</div>
+		<div class="info">
+			<a href="javascript:void(0)" class="groupings" onclick="plassGrouping('2')">To og to</a>
+		</div>
+		<div class="info">
+			<a href="javascript:void(0)" class="groupings" onclick="plassGrouping('3')">tre og tre</a>
+		</div>
+		<div class="info">
+			<a href="javascript:void(0)" class="groupings" onclick="plassGrouping('4')">fire og fire</a>
+		</div>
+		<div class="info">
+			<a href="javascript:void(0)" class="groupings" onclick="plassGrouping('5')">fem og fem</a>
+		</div>
+	</div>
+
+	<main>
+		<div class="Rom">
+
+
+
+
+		</div>
+
+		<div class="modes">
+			<div class="modes">
+				Moduser: 
+				<a href="javascript:void(0)" class="reset button active">Plasser</a>
+				<a href="index.html" class="reset button">Random</a>
+				<a href="index.html#order" class="reset button">Rekkefølge</a>
+			</div>
+
+			<div class="modes">
+				Farger: 
+				<a href="javascript:void(0)" class="reset" onclick="fargeMode('hvit')">Hvit</a>
+				<a href="javascript:void(0)" class="reset" onclick="fargeMode('svart')">Svart</a>
+				<a href="javascript:void(0)" class="reset" onclick="fargeMode('rosa')">Rosa</a>
+			</div>
+		</div>
+	</main>
+
+</body>
+</html>

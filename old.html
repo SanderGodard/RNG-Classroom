@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RNG picker</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Sander 2IKT-SK 2019/2020">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#262626">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#262626">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#262626">
+
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,600,700" rel="stylesheet">
+	<!--
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	-->
+<script defer src="js/main.js"></script>
+<script defer src="js/quotes.js"></script>
+
+</head>
+<body onload="trekkninger()">
+	<button type="button" name="button" class="borte" onclick="borte()">Er noen borte i dag?</button>
+	<div class="usynlig" id="Liste">
+
+		<ul id='plass' class="plass">
+			Hvem er borte?
+		</ul>
+
+	</div>
+	<button onclick="runRNG()" class="knapp">Trykk her for å bli skuffa!</button>
+
+	<p id="wew" class="result">
+
+	</p>
+
+	<div class="h">
+		<div id="Text" class="ut">
+
+		</div>
+		<div id="EOut" class="ut l">
+
+		</div>
+	</div>
+
+	<div class="spm">
+	Hvor mange skal trekkes om gangen?
+	</div>
+
+	<div class="knapperekke">
+		<button class="float +-" type="button" name="button" onclick="minus()">-</button>
+
+			<div class="float" id=trekkninger>""</div>
+
+		<button class="float +-" type="button" name="button" onclick="pluss()">+</button>
+	</div>
+	<ol id="List" class="listemain">
+		Trukket:    Score
+
+	</ol>
+</body>
+</html>
