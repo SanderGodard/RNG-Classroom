@@ -5,4 +5,4 @@ Currently doesnt store absence, points given, or color. Big parts of it is made 
 Have good ideas for remaking a similar thing.
 
 It's gonna sit at:
-https://github.com/SanderGodard/WebClass/
+https://github.com/SanderGodard/ClassWeb/
