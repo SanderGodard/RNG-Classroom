@@ -1,28 +1,46 @@
+document.body.onload = function () {
+  timerDiv = document.getElementById("countdown");
+  startBtn = document.getElementById("startBtn");
+  stopBtn = document.getElementById("stopBtn");
+  resetBtn = document.getElementById("resetBtn");
 
-timerDiv = document.getElementById("countdown");
-startBtn = document.getElementById("countdown");
-stoBtn = document.getElementById("countdown");
-resetBtn = document.getElementById("countdown");
+};
 
-function startTimer(d){
-timeLeft = 25;
-var downloadTimer = setInterval(function(){
-  document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
-  timeLeft -= 1;
-  if(timeleft <= 0){
-    clearInterval(downloadTimer);
-    document.getElementById("countdown").innerHTML = "Finished"
+function startTimer(d) {
+  startBtn.setAttribute("onclick", "");
+  timeLeft = timerDiv.innerHTML;
+  if (timeLeft == "Ferdig") {
+    timeLeft = 25;
+  } else if (timeLeft == "") {
+    timeLeft = 25;
   }
-}, 1000);
+  downloadTimer = setInterval(function () {
+    timeLeft -= 1;
+    timerDiv.innerHTML = timeLeft;
+    if (timeLeft <= 0) {
+      clearInterval(downloadTimer);
+      document.getElementById("countdown").innerHTML = "Ferdig";
+      var audio = new Audio('allarm.mp3');
+      audio.play();
+    }
+  }, 1000);
 }
 
-function stopTimer(d){
-    clearInterval(downloadTimer);
-    startBtn.innerHTML = "Fortsett";
+function stopTimer(d) {
+  clearInterval(downloadTimer);
+  startBtn.innerHTML = "Fortsett";
+  startBtn.setAttribute("onclick", "resumeTimer()");
 }
 
-function resetTimer(){
-    startBtn.innerHTML = "Start";
-    timerDiv.innerHTML = "25 seconds remaining";
+function resetTimer() {
+  timerDiv.innerHTML = "25";
+  clearInterval(downloadTimer);
+  startBtn.innerHTML = "Start";
+  startBtn.setAttribute("onclick", "startTimer()");
+}
 
+function resumeTimer() {
+  startBtn.innerHTML = "Start";
+  startBtn.setAttribute("onclick", "");
+  startTimer();
 }

@@ -57,5 +57,5 @@ function startGame(i) {
     console.log(usersList);
 
     sessionStorage.setItem("usersList", usersList);
-    window.location.href = "wheel.html";
+    window.location.href = "game.html";
 }
