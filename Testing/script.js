@@ -7,7 +7,6 @@ function addUsers(antUsers) {
     newInput.setAttribute("id", "u" + antUsers);
     newInput.setAttribute("name", "u" + antUsers);
     newInput.setAttribute("class", "inputUsers");
-
     button.setAttribute("onclick", "addUsers(" + (antUsers + 1) + ")");
 
     form.insertBefore(newInput, button);
