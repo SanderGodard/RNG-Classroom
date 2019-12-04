@@ -1,9 +1,14 @@
-var timeleft = 10;
+
+timerDiv = document.getElementById("countdown");
+startBtn = document.getElementById("countdown");
+stoBtn = document.getElementById("countdown");
+resetBtn = document.getElementById("countdown");
 
 function startTimer(d){
-setInterval(function(){
-  document.getElementById("countdown").innerHTML = timeleft + " til du må svare";
-  timeleft -= 1;
+timeLeft = 25;
+var downloadTimer = setInterval(function(){
+  document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+  timeLeft -= 1;
   if(timeleft <= 0){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "Finished"
@@ -12,5 +17,12 @@ setInterval(function(){
 }
 
 function stopTimer(d){
-    
+    clearInterval(downloadTimer);
+    startBtn.innerHTML = "Fortsett";
+}
+
+function resetTimer(){
+    startBtn.innerHTML = "Start";
+    timerDiv.innerHTML = "25 seconds remaining";
+
 }
