@@ -50,16 +50,23 @@ function startGame(i) {
     var form = document.getElementById("addUsersForm");
     var users = document.getElementsByClassName("inputUsers");
     var usersList = "";
+    var x = 0;
     for (let index = 0; index < users.length; index++) {
         var input = users[index];
         var userName = input.value;
         if (userName) {
-            usersList += userName + ",";
+            if (x == 0) {
+                usersList += userName;
+            } else {
+                usersList += "," + userName;
+            }
+            console.log(x);
+            x++;
         }
     }
 
     form.remove();
-
+    console.log(usersList);
 
     sessionStorage.setItem("usersList", usersList);
     window.location.href = "game.html";

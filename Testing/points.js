@@ -1,4 +1,6 @@
 userArray = sessionStorage.getItem("usersList").split(",");
+console.log(sessionStorage.getItem("usersList"));
+console.log(userArray);
 
 function setPoint(id, value) {
     var points = sessionStorage.getItem("pointsArray");
@@ -16,7 +18,8 @@ if (sessionStorage.getItem("pointsArray") == undefined) {
 
 document.body.onload = function () {
     usersDiv = document.getElementById("users");
-    for (var index = 0; index < (userArray.length - 1); index++) {
+    document.getElementById("addUserBtn").setAttribute("onclick", "addUsers(" + (userArray.length) + ")");
+    for (var index = 0; index < (userArray.length); index++) {
         var user = userArray[index];
 
         var userDiv = document.createElement("div");
