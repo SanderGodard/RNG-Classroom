@@ -102,6 +102,12 @@ function buttonsActive(state) {
   }
 }
 
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        runRNG();
+    }
+}
+
 function runRNG() {
   // sets class "button" to be disabled...
   buttonsActive(false);
