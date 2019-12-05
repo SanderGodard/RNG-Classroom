@@ -7,7 +7,6 @@ function addUsers(antUsers) {
     newInput.setAttribute("id", "u" + antUsers);
     newInput.setAttribute("name", "u" + antUsers);
     newInput.setAttribute("class", "inputUsers");
-
     button.setAttribute("onclick", "addUsers(" + (antUsers + 1) + ")");
 
     form.insertBefore(newInput, button);
@@ -46,23 +45,17 @@ function remUsers(antUsers) {
 function startGame(i) {
     var form = document.getElementById("addUsersForm");
     var users = document.getElementsByClassName("inputUsers");
-    var usersList = [];
+    var usersList = "";
     for (let index = 0; index < users.length; index++) {
         var input = users[index];
         var userName = input.value;
-        usersList.push(userName);
+        usersList += userName + ",";
     }
 
     form.remove();
 
-    var userListDiv = document.createElement("div");
     console.log(usersList);
 
-    for (let index = 0; index < usersList.length; index++) {
-        var divContent = usersList[index];
-        console.log(divContent);
-        userListDiv.innerHTML += divContent + "<br>";
-    }
-
-    document.body.appendChild(userListDiv);
+    sessionStorage.setItem("usersList", usersList);
+    window.location.href = "game.html";
 }
