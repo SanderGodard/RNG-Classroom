@@ -26,7 +26,6 @@ for (let index = 0; index < (dataArray.length - 1); index++) {
     data.push(userObject);
 }
 
-console.log(data);
 
 /*  [{
      "label": "Dell LAPTOP",
@@ -78,10 +77,12 @@ arcs.append("text").attr("transform", function (d) {
 container.on("click", spin);
 
 function spin(d) {
-
+    var spinAudio = new Audio("spin.mp3");
+    spinAudio.play();
     container.on("click", null);
+
     //all slices have been seen, all done
-    console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
+    /* console.log("OldPick: " + oldpick.length, "Data length: " + data.length); */
     /* if (oldpick.length == data.length) {
         console.log("done");
         container.on("click", null);
@@ -113,7 +114,8 @@ function spin(d) {
             d3.select("#question h1")
                 .text(data[picked].text);
             oldrotation = rotation;
-
+            spinAudio.pause();
+            spinAudio.currentTime = 0;
             container.on("click", spin);
         });
 }
@@ -159,7 +161,6 @@ function getRandomNumbers() {
     var scale = d3.scale.linear().range([360, 1440]).domain([0, 100000]);
     if (window.hasOwnProperty("crypto") && typeof window.crypto.getRandomValues === "function") {
         window.crypto.getRandomValues(array);
-        console.log("works");
     } else {
         //no support for crypto, get crappy random numbers
         for (var i = 0; i < 1000; i++) {

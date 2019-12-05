@@ -1,3 +1,7 @@
+if (sessionStorage.getItem("pointsArray") !== null) {
+    sessionStorage.removeItem("pointsArray");
+}
+
 function addUsers(antUsers) {
     var form = document.getElementById("addUsersForm")
     var button = document.getElementById("addUsersButton");
@@ -49,12 +53,13 @@ function startGame(i) {
     for (let index = 0; index < users.length; index++) {
         var input = users[index];
         var userName = input.value;
-        usersList += userName + ",";
+        if (userName) {
+            usersList += userName + ",";
+        }
     }
 
     form.remove();
 
-    console.log(usersList);
 
     sessionStorage.setItem("usersList", usersList);
     window.location.href = "game.html";
