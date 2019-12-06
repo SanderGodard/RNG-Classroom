@@ -67,20 +67,6 @@ function startGame(i) {
     usersJson = JSON.stringify(usersArray);
     sessionStorage.setItem("usersList", usersJson);
 
-    /* for (let index = 0; index < users.length; index++) {
-        var input = users[index];
-        var userName = input.value;
-        if (userName) {
-            if (x == 0) {
-                usersList += userName;
-            } else {
-                usersList += "," + userName;
-            }
-            console.log(x);
-            x++;
-        }
-    } */
-
     form.remove();
     window.location.href = "game.html";
 }
