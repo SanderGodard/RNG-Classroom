@@ -49,9 +49,22 @@ function remUsers(antUsers) {
 function startGame(i) {
     var form = document.getElementById("addUsersForm");
     var users = document.getElementsByClassName("inputUsers");
-    var usersList = "";
-    var x = 0;
+    var usersArray = Array();
     for (let index = 0; index < users.length; index++) {
+        var input = users[index];
+        var userName = input.value;
+        if (userName) {
+            var userObject = {
+                name: userName,
+                value: 1,
+                text: "Gratulerer " + userName,
+                points: 0
+            };
+            
+        }
+    }
+
+    /* for (let index = 0; index < users.length; index++) {
         var input = users[index];
         var userName = input.value;
         if (userName) {
@@ -63,11 +76,11 @@ function startGame(i) {
             console.log(x);
             x++;
         }
-    }
+    } */
 
     form.remove();
     console.log(usersList);
 
     sessionStorage.setItem("usersList", usersList);
-    window.location.href = "game.html";
+    /* window.location.href = "game.html"; */
 }

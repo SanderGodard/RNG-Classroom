@@ -19,13 +19,16 @@ var data = [];
 for (let index = 0; index < (dataArray.length); index++) {
     var userName = dataArray[index];
     var userObject = {
-        label: userName,
+        name: userName,
         value: 1,
         text: "Gratulerer " + userName
     };
     data.push(userObject);
 }
 
+data.to
+
+console.log("json" + JSON.stringify(data));
 
 /*  [{
      "label": "Dell LAPTOP",
@@ -72,7 +75,7 @@ arcs.append("text").attr("transform", function (d) {
     })
     .attr("text-anchor", "end")
     .text(function (d, i) {
-        return data[i].label;
+        return data[i].name;
     });
 container.on("click", spin);
 
