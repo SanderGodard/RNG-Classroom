@@ -21,8 +21,8 @@
       timerDiv.innerHTML = timeLeft;
       if (timeLeft <= 0) {
         clearInterval(downloadTimer);
-        document.getElementById("countdown").innerHTML = "Ferdig";
-        var audio = new Audio('alarm.mp3');
+        document.getElementById("countdown").innerHTML = "Dårlig?";
+        var audio = new Audio('bell.mp3');
         audio.play();
         audioTrivia.pause();
         audioTrivia.currentTime = 0;

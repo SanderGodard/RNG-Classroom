@@ -14,8 +14,7 @@ var padding = {
     color = d3.scale.category20(); //category20c()
 //randomNumbers = getRandomNumbers();
 //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
-var dataArray = sessionStorage.getItem("usersList").split(",");
-var data = [];
+/* var data = [];
 for (let index = 0; index < (dataArray.length); index++) {
     var userName = dataArray[index];
     var userObject = {
@@ -25,10 +24,9 @@ for (let index = 0; index < (dataArray.length); index++) {
     };
     data.push(userObject);
 }
+ */
+data = JSON.parse(sessionStorage.getItem("usersList"));
 
-data.to
-
-console.log("json" + JSON.stringify(data));
 
 /*  [{
      "label": "Dell LAPTOP",
@@ -114,7 +112,7 @@ function spin(d) {
             /* d3.select(".slice:nth-child(" + (picked + 1) + ") path")
                 .attr("fill", "#111"); */
             //populate question
-            d3.select("#question h1")
+            d3.select("#question span")
                 .text(data[picked].text);
             oldrotation = rotation;
             spinAudio.pause();

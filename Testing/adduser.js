@@ -5,20 +5,26 @@ div = document.getElementById("users");
 function addUsers(userId) {
 
     input.setAttribute("id", "addUserInput");
-    div.appendChild(input);
+    document.getElementById("users-flex").insertBefore(input, btn);
 
     btn.innerHTML = "Legg til";
     btn.setAttribute("onclick", "newUser(" + userId + ")");
 }
 
 function newUser(userId) {
-    userName = input.value
+    var userName = input.value
     if (userName) {
-        userArray = sessionStorage.getItem("usersList").split(",");
-        userArray.push(userName);
-        string = userArray.toString();
+        userObj = {
+            name: userName,
+            value: 1,
+            text: "Gratulerer " + userName,
+            points: 0
+        };
+        userArray = JSON.parse(sessionStorage.getItem("usersList"));
+        userArray.push(userObj);
+        userJson = JSON.stringify(userArray);
 
-        sessionStorage.setItem("usersList", string)
+        sessionStorage.setItem("usersList", userJson);
 
         input.remove();
 
@@ -30,4 +36,13 @@ function newUser(userId) {
         window.alert("Wallah gjør det ordentlig a");
     }
 
+}
+
+function remUser(userId) {
+    userArray = JSON.parse(sessionStorage.getItem("usersList"));
+    userArray.splice(userId, 1);
+    console.log(userArray);
+    userJson = JSON.stringify(userArray);
+    sessionStorage.setItem("usersList", userJson);
+    document.location.reload();
 }

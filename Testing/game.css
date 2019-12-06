@@ -1,0 +1,116 @@
+text {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    pointer-events: none;
+}
+
+.flex-wrapper {
+    display: flex;
+}
+
+#chart {
+    width: 500px;
+    height: 500px;
+    top: 0;
+    left: 0;
+}
+
+
+#question {
+    width: 310px;
+    line-height: inherit;
+    text-align: center;
+}
+
+#question span {
+    display: block;
+    margin-top: 230px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding-left: 10px;
+}
+
+#question div {
+    display: block;
+    height: 460px;
+    margin-top: 27px;
+    border: 1px solid white;
+
+}
+
+
+.count-users {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.user {
+    text-align: center;
+    display: block;
+    width: 70px;
+}
+
+#users {
+    display: block;
+    margin: auto;
+    width: 170px;
+}
+
+#users-flex {
+    width: 30%;
+}
+
+#addUserBtn {
+    display: block;
+    margin: auto;
+}
+
+#addUserInput {
+    display: block;
+    margin-left: auto;
+}
+
+#countdown {
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.timerBtn {
+    height: 40px;
+    width: 75px;
+}
+
+#timer {
+    display: block;
+    margin-top: 50%;
+    text-align: center;
+}
+
+#startBtn {
+    background-color: green;
+}
+
+#stopBtn {
+    background-color: red;
+}
+
+#resetBtn {
+    background-color: yellow;
+}
+
+#user-rem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.remUserBtn {
+    display: block;
+    margin-top: 50%;
+}

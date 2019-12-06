@@ -50,6 +50,7 @@ function startGame(i) {
     var form = document.getElementById("addUsersForm");
     var users = document.getElementsByClassName("inputUsers");
     var usersArray = Array();
+
     for (let index = 0; index < users.length; index++) {
         var input = users[index];
         var userName = input.value;
@@ -60,9 +61,11 @@ function startGame(i) {
                 text: "Gratulerer " + userName,
                 points: 0
             };
-            
+            usersArray.push(userObject);
         }
     }
+    usersJson = JSON.stringify(usersArray);
+    sessionStorage.setItem("usersList", usersJson);
 
     /* for (let index = 0; index < users.length; index++) {
         var input = users[index];
@@ -79,8 +82,5 @@ function startGame(i) {
     } */
 
     form.remove();
-    console.log(usersList);
-
-    sessionStorage.setItem("usersList", usersList);
-    /* window.location.href = "game.html"; */
+    window.location.href = "game.html";
 }

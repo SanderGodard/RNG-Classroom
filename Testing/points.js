@@ -1,4 +1,5 @@
-userArray = sessionStorage.getItem("usersList").split(",");
+userArray = JSON.parse(sessionStorage.getItem("usersList"));
+
 console.log(sessionStorage.getItem("usersList"));
 console.log(userArray);
 
@@ -25,53 +26,63 @@ document.body.onload = function () {
         var userDiv = document.createElement("div");
         userDiv.setAttribute("class", "user");
         userDiv.setAttribute("id", "user" + index);
-        userDiv.innerHTML = user;
+        userDiv.innerHTML = user.name;
 
         var plusBtn = document.createElement("button")
         plusBtn.setAttribute("class", "plusBtn");
         plusBtn.setAttribute("onclick", "addPoint(" + index + ")");
-        plusBtn.innerHTML = "+"
+        plusBtn.innerHTML = "+";
 
         var minusBtn = document.createElement("button")
         minusBtn.setAttribute("class", "minusBtn");
         minusBtn.setAttribute("onclick", "remPoint(" + index + ")");
-        minusBtn.innerHTML = "-"
+        minusBtn.innerHTML = "-";
+
+        var remUserBtn = document.createElement("button");
+        remUserBtn.setAttribute("class", "remUserBtn");
+        remUserBtn.setAttribute("onclick", "remUser(" + index + ")");
+        remUserBtn.innerHTML = "Fjern";
 
         var pointCounter = document.createElement("div");
         pointCounter.setAttribute("id", "point" + index);
 
-        var points = sessionStorage.getItem("pointsArray");
-        pointsArray = points.split(",");
+        var points = user.points;
 
-        console.log(pointsArray[index]);
-        if (pointsArray[index]) {
-            pointCounter.innerHTML = pointsArray[index];
-        } else {
-            pointCounter.innerHTML = 0;
-            setPoint(index, 0);
+        pointCounter.innerHTML = points;
 
-        }
+        var xDiv = document.createElement("div");
+        xDiv.id = "user-rem";
+        var yDiv = document.createElement("div");
+        yDiv.appendChild(remUserBtn);
 
-        userDiv.appendChild(plusBtn);
-        userDiv.appendChild(minusBtn);
         userDiv.appendChild(pointCounter);
+        userDiv.appendChild(minusBtn);
+        userDiv.appendChild(plusBtn);
         userDiv.appendChild(document.createElement("br"));
-        usersDiv.appendChild(userDiv);
+
+        xDiv.appendChild(userDiv);
+        xDiv.appendChild(yDiv);
+        usersDiv.appendChild(xDiv);
     }
 };
 
 function addPoint(userId) {
+    var points = userArray[userId].points;
     var pointCounter = document.getElementById("point" + userId);
-    count = parseInt(pointCounter.innerHTML);
-    count++;
-    pointCounter.innerHTML = count;
-    setPoint(userId, count);
+    points++;
+    pointCounter.innerHTML = points;
+    console.log(userArray);
+    userArray[userId].points = points;
+    userJson = JSON.stringify(userArray);
+    sessionStorage.setItem("usersList", userJson);
 }
 
 function remPoint(userId) {
+    var points = userArray[userId].points;
     var pointCounter = document.getElementById("point" + userId);
-    count = parseInt(pointCounter.innerHTML);
-    count = count - 1;
-    pointCounter.innerHTML = count;
-    setPoint(userId, count);
+    points = points - 1;
+    pointCounter.innerHTML = points;
+    userArray[userId].points = points;
+    userJson = JSON.stringify(userArray);
+    sessionStorage.setItem("usersList", userJson);
 }
