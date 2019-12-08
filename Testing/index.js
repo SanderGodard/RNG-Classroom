@@ -2,41 +2,37 @@ if (sessionStorage.getItem("pointsArray") !== null) {
     sessionStorage.removeItem("pointsArray");
 }
 
-function addUsers(antUsers) {
+function checkUsers() {
+    var divArray = document.getElementById("users").querySelectorAll("input").length;
+    return divArray;
+}
+
+function addUsers() {
+    var antUsers = checkUsers();
     var div = document.getElementById("users");
-    var remButton = document.getElementById("remUsersButton");
-    var form = document.getElementById("addUsersForm")
-    var button = document.getElementById("addUsersButton");
+    var remButton = document.getElementById("remUsersButton")
     var newInput = document.createElement("input");
 
     newInput.setAttribute("id", "u" + antUsers);
     newInput.setAttribute("name", "u" + antUsers);
     newInput.setAttribute("class", "inputUsers");
-    button.setAttribute("onclick", "addUsers(" + (antUsers + 1) + ")");
 
     div.appendChild(newInput);
     div.appendChild(document.createElement("br"));
 
     newInput.focus();
 
+    console.log(antUsers);
     if (antUsers < 2) {
-        var remButton = document.createElement("button");
-        remButton.setAttribute("type", "button");
-        remButton.setAttribute("id", "remUsersButton");
-        remButton.innerHTML = "Fjern deltager";
-        remButton.setAttribute("onclick", "remUsers(" + (antUsers) + ")");
-        var startButton = document.getElementById("startGame");
-        form.insertBefore(remButton, startButton);
-    } else {
-        remButton.setAttribute("onclick", "remUsers(" + (antUsers) + ")");
+        remButton.setAttribute("onclick", "remUsers()");
     }
 }
 
-function remUsers(antUsers) {
+function remUsers() {
+    var antUsers = (checkUsers() - 1);
     var div = document.getElementById("users");
     var remButton = document.getElementById("remUsersButton");
-    var addButton = document.getElementById("addUsersButton");
-    var input = document.getElementById("u" + antUsers);
+    var input = document.getElementById("u" + (antUsers));
 
     input.remove();
     div.removeChild(div.childNodes[(div.childNodes.length - 2)]);
@@ -44,11 +40,7 @@ function remUsers(antUsers) {
 
     antUsers = antUsers - 1;
     if (antUsers < 1) {
-        remButton.remove();
-        addButton.setAttribute("onclick", "addUsers(" + (antUsers + 1) + ")");
-    } else {
-        remButton.setAttribute("onclick", "remUsers(" + (antUsers) + ")");
-        addButton.setAttribute("onclick", "addUsers(" + (antUsers + 1) + ")");
+        remButton.setAttribute("onclick", "");
     }
 }
 
