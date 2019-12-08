@@ -3,9 +3,10 @@ if (sessionStorage.getItem("pointsArray") !== null) {
 }
 
 function addUsers(antUsers) {
+    var div = document.getElementById("users");
+    var remButton = document.getElementById("remUsersButton");
     var form = document.getElementById("addUsersForm")
     var button = document.getElementById("addUsersButton");
-    var remButton = document.getElementById("remUsersButton");
     var newInput = document.createElement("input");
 
     newInput.setAttribute("id", "u" + antUsers);
@@ -13,7 +14,10 @@ function addUsers(antUsers) {
     newInput.setAttribute("class", "inputUsers");
     button.setAttribute("onclick", "addUsers(" + (antUsers + 1) + ")");
 
-    form.insertBefore(newInput, button);
+    div.appendChild(newInput);
+    div.appendChild(document.createElement("br"));
+
+    newInput.focus();
 
     if (antUsers < 2) {
         var remButton = document.createElement("button");
@@ -29,12 +33,14 @@ function addUsers(antUsers) {
 }
 
 function remUsers(antUsers) {
-
+    var div = document.getElementById("users");
     var remButton = document.getElementById("remUsersButton");
     var addButton = document.getElementById("addUsersButton");
     var input = document.getElementById("u" + antUsers);
 
     input.remove();
+    div.removeChild(div.childNodes[(div.childNodes.length - 2)]);
+
 
     antUsers = antUsers - 1;
     if (antUsers < 1) {
@@ -64,9 +70,15 @@ function startGame(i) {
             usersArray.push(userObject);
         }
     }
+    console.log(usersArray);
     usersJson = JSON.stringify(usersArray);
     sessionStorage.setItem("usersList", usersJson);
 
     form.remove();
-    window.location.href = "game.html";
+    if (usersArray.length) {
+        window.location.href = "game.html";
+    } else {
+        alert("Er du dom elle?")
+        document.location.reload();
+    }
 }
