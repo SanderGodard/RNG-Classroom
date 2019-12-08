@@ -1,8 +1,5 @@
 userArray = JSON.parse(sessionStorage.getItem("usersList"));
 
-console.log(sessionStorage.getItem("usersList"));
-console.log(userArray);
-
 function setPoint(id, value) {
     var points = sessionStorage.getItem("pointsArray");
     pointsArray = points.split(",");
@@ -71,7 +68,6 @@ function addPoint(userId) {
     var pointCounter = document.getElementById("point" + userId);
     points++;
     pointCounter.innerHTML = points;
-    console.log(userArray);
     userArray[userId].points = points;
     userJson = JSON.stringify(userArray);
     sessionStorage.setItem("usersList", userJson);

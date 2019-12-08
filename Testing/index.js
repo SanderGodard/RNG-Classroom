@@ -70,7 +70,6 @@ function startGame(i) {
             usersArray.push(userObject);
         }
     }
-    console.log(usersArray);
     usersJson = JSON.stringify(usersArray);
     sessionStorage.setItem("usersList", usersJson);
 
