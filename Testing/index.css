@@ -20,7 +20,7 @@
 #users input {
     margin-bottom: 20px;
     padding: 5px;
-    font-size 3em;
+    font-size: 3em;
 }
 
 
@@ -28,5 +28,5 @@ button {
     display: block;
     margin-bottom: 5%;
     padding: 10px;
-    font-size 1em;
+    font-size: 1em;
 }
