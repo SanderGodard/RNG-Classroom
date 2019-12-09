@@ -34,6 +34,7 @@ function remUsers() {
     var remButton = document.getElementById("remUsersButton");
     var input = document.getElementById("u" + (antUsers));
 
+    console.log(div.childNodes);
     input.remove();
     div.removeChild(div.childNodes[(div.childNodes.length - 2)]);
 

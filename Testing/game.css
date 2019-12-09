@@ -1,3 +1,7 @@
+body {
+    margin: 0px;
+}
+
 text {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 30px;
@@ -113,4 +117,61 @@ text {
 .remUserBtn {
     display: block;
     margin-top: 50%;
+}
+
+#intro {
+    animation: colorchange 3s;
+    /* animation-name followed by duration in seconds*/
+    /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 3s;
+    /* Chrome and Safari */
+    height: 100vh;
+    display: block;
+}
+
+@keyframes colorchange {
+    0% {
+        background: red;
+    }
+
+    25% {
+        background: yellow;
+    }
+
+    50% {
+        background: blue;
+    }
+
+    75% {
+        background: green;
+    }
+
+    100% {
+        background: red;
+    }
+}
+
+@-webkit-keyframes colorchange
+
+/* Safari and Chrome - necessary duplicate */
+    {
+    0% {
+        background: red;
+    }
+
+    25% {
+        background: yellow;
+    }
+
+    50% {
+        background: blue;
+    }
+
+    75% {
+        background: green;
+    }
+
+    100% {
+        background: red;
+    }
 }

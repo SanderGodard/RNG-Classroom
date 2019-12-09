@@ -9,33 +9,40 @@
     <script defer type="text/javascript" src="timer.js" charset="utf-8"></script>
     <script defer type="text/javascript" src="points.js" charset="utf-8"></script>
     <script defer type="text/javascript" src="adduser.js" charset="utf-8"></script>
+    <script defer type="text/javascript" src="intro.js" charset="utf-8"></script>
     <link rel="stylesheet" href="game.css">
 
 </head>
 
-<body>
-    <div class="flex-wrapper">
-        <div id="chart"></div>
-        <div id="question">
-            <div>
-                <span></span>
-            </div>
-        </div>
-        <div class="count-users">
 
-            <div class="countdown">
-                <div id="timer">
-                    <div id="countdown">25</div>
-                    <button class="timerBtn" id="startBtn" onclick="startTimer()">Start</button>
-                    <button class="timerBtn" id="stopBtn" onclick="stopTimer()">Stop</button>
-                    <button class="timerBtn" id="resetBtn" onclick="resetTimer()">Reset</button>
+<body>
+    <div id="intro">
+        <img src="">
+    </div>
+    <div id="game">
+        <div class="flex-wrapper">
+            <div id="chart"></div>
+            <div id="question">
+                <div>
+                    <span></span>
                 </div>
             </div>
-            <div id="users-flex">
-                <div id="users">
+            <div class="count-users">
+
+                <div class="countdown">
+                    <div id="timer">
+                        <div id="countdown">25</div>
+                        <button class="timerBtn" id="startBtn" onclick="startTimer()">Start</button>
+                        <button class="timerBtn" id="stopBtn" onclick="stopTimer()">Stop</button>
+                        <button class="timerBtn" id="resetBtn" onclick="resetTimer()">Reset</button>
+                    </div>
                 </div>
-                <br>
-                <button id="addUserBtn" onclick="addUsers()">Flere som vil slite?</button>
+                <div id="users-flex">
+                    <div id="users">
+                    </div>
+                    <br>
+                    <button id="addUserBtn" onclick="addUsers()">Flere som vil slite?</button>
+                </div>
             </div>
         </div>
     </div>
