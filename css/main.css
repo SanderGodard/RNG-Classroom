@@ -535,4 +535,206 @@ main .quote {
   margin: 3px;
 }
 
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+#users, #buttons {
+  height: 100%;
+  width: 40%;
+}
+
+#users {
+  height: inherit;
+  text-align: right;
+}
+#users input {
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 1em;
+}
+
+button {
+  display: block;
+  margin-bottom: 5%;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#chart {
+  width: 500px;
+  height: 500px;
+  top: 0;
+  left: 0;
+}
+
+#question {
+  width: 310px;
+  line-height: inherit;
+  text-align: center;
+}
+#question span {
+  display: block;
+  margin-top: 230px;
+  font-size: 50px;
+  font-weight: bold;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  padding-left: 10px;
+}
+#question div {
+  display: block;
+  height: 460px;
+  margin-top: 27px;
+}
+
+.count-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 46%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.user {
+  text-align: center;
+  display: block;
+  width: 70px;
+}
+
+#brukere {
+  display: block;
+  margin: auto;
+  width: 170px;
+}
+
+#users-flex {
+  width: 30%;
+}
+
+#addUserBtn {
+  display: block;
+  margin: auto;
+}
+
+#addUserInput {
+  display: block;
+  margin-left: auto;
+}
+
+#countdown {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.timerBtn {
+  height: 40px;
+  width: 75px;
+}
+
+#timer {
+  display: block;
+  margin-top: 50%;
+  text-align: center;
+}
+
+#startBtn {
+  background-color: green;
+}
+
+#stopBtn {
+  background-color: red;
+}
+
+#resetBtn {
+  background-color: yellow;
+}
+
+#user-rem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.remUserBtn {
+  display: block;
+  margin-top: 50%;
+}
+
+#intro {
+  animation: colorchange 3s;
+  /* animation-name followed by duration in seconds */
+  /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 3s;
+  /* Chrome and Safari */
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#intro img {
+  width: 60vw;
+}
+
+@keyframes colorchange {
+  0% {
+    background: red;
+  }
+  25% {
+    background: yellow;
+  }
+  50% {
+    background: blue;
+  }
+  75% {
+    background: green;
+  }
+  100% {
+    background: red;
+  }
+}
+@-webkit-keyframes colorchange {
+  0% {
+    background: red;
+  }
+  25% {
+    background: yellow;
+  }
+  50% {
+    background: blue;
+  }
+  75% {
+    background: green;
+  }
+  100% {
+    background: red;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
