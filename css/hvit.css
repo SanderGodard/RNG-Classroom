@@ -73,8 +73,8 @@ img {
   width: 5px;
   margin: 2px 2px 2px -7px;
   right: 0;
-  -webkit-box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
-          box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -94,8 +94,8 @@ img {
 }
 
 .sidebar {
-  -webkit-box-shadow: 0px 3px 9px 3px rgba(150, 150, 150, 0.4);
-          box-shadow: 0px 3px 9px 3px rgba(150, 150, 150, 0.4);
+  -webkit-box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.4);
   background-color: #CECECE;
   width: 15%;
   min-width: 300px;
@@ -106,8 +106,8 @@ img {
   width: 50%;
 }
 .sidebar .title {
-  -webkit-box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
-          box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,8 +328,8 @@ main a {
   display: inline-block;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  -webkit-box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
-          box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
   padding: 28px 40px;
   font-size: 2em;
   background-color: #FFFFFF;
@@ -338,8 +338,8 @@ main a {
 main a:hover {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  -webkit-box-shadow: 0px 3px 9px 3px rgba(150, 150, 150, 0.4);
-          box-shadow: 0px 3px 9px 3px rgba(150, 150, 150, 0.4);
+  -webkit-box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.4);
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
   background-color: #CECECE;
@@ -347,8 +347,8 @@ main a:hover {
 main a:active {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  -webkit-box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
-          box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
   background-color: #CECECE;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -391,7 +391,14 @@ main .quote {
   border-color: #949494;
 }
 
-.modes {
+.modesP {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 20px;
+}
+.modesP .modes {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -405,7 +412,7 @@ main .quote {
           justify-content: center;
   margin: 20px 10px;
 }
-.modes a {
+.modesP .modes a {
   padding: 8px;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -414,8 +421,8 @@ main .quote {
 
 .plassRun {
   background-color: #FFFFFF;
-  -webkit-box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
-          box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
   border: 1px solid #949494;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -438,8 +445,8 @@ main .quote {
 .plassRun:hover {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  -webkit-box-shadow: 0px 3px 9px 3px rgba(150, 150, 150, 0.4);
-          box-shadow: 0px 3px 9px 3px rgba(150, 150, 150, 0.4);
+  -webkit-box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.4);
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
   background-color: #949494;
@@ -447,8 +454,8 @@ main .quote {
 .plassRun:active {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  -webkit-box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
-          box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
   background-color: #949494;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -456,8 +463,8 @@ main .quote {
 
 .groupings {
   background-color: #FFFFFF;
-  -webkit-box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
-          box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
   border: 1px solid #949494;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -479,8 +486,8 @@ main .quote {
 .groupings:hover {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  -webkit-box-shadow: 0px 3px 9px 3px rgba(150, 150, 150, 0.4);
-          box-shadow: 0px 3px 9px 3px rgba(150, 150, 150, 0.4);
+  -webkit-box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 9px 3px rgba(0, 0, 0, 0.4);
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
   background-color: #949494;
@@ -488,8 +495,8 @@ main .quote {
 .groupings:active {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  -webkit-box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
-          box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.3);
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
   background-color: #949494;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -533,6 +540,297 @@ main .quote {
   border: 1px solid #CECECE;
   padding: 25px 10px;
   margin: 3px;
+}
+
+#addUsersForm {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5vmax;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#addUsersForm #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+}
+#addUsersForm #container #users, #addUsersForm #container #buttons {
+  width: 45%;
+  margin: 0 10px;
+}
+#addUsersForm #container #users input, #addUsersForm #container #users button, #addUsersForm #container #buttons input, #addUsersForm #container #buttons button {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 1em;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1em;
+}
+#addUsersForm #container #users label, #addUsersForm #container #buttons label {
+  height: 1.25em;
+  margin: 0;
+  line-height: 1.25;
+}
+#addUsersForm #container #users button, #addUsersForm #container #buttons button {
+  margin: 1.25em auto 20px;
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 5vmax;
+}
+#game text {
+  font-size: 2.5em;
+}
+#game input, #game button {
+  width: 50%;
+  font-size: 1em;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1em;
+}
+#game .midtstill {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: calc(100vh - 10vmax);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#game .midtstill #chart {
+  width: 500px;
+  height: 500px;
+  top: 0;
+  left: 0;
+}
+#game .midtstill #question {
+  width: 310px;
+  line-height: inherit;
+  text-align: center;
+}
+#game .midtstill #question span {
+  font-size: 50px;
+  font-weight: bold;
+}
+#game .count-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 46%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+#game .count-users button {
+  border: 0px solid white;
+}
+#game .count-users .countdown #timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  height: calc(100vh - 10vmax);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#game .count-users .countdown #timer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#game .count-users .countdown #timer div .timerBtn {
+  margin: 1px;
+}
+#game .count-users .countdown #timer div #startBtn {
+  background-color: green;
+}
+#game .count-users .countdown #timer div #stopBtn {
+  background-color: red;
+}
+#game .count-users .countdown #timer div #resetBtn {
+  background-color: yellow;
+}
+#game .count-users .countdown #timer #countdown {
+  font-size: 5em;
+  font-weight: bold;
+}
+#game .count-users #users-flex {
+  width: 30%;
+}
+#game .count-users #users-flex #brukere {
+  display: block;
+  margin: auto;
+  width: 170px;
+  overflow: auto;
+  height: calc(100vh - 10vmax);
+}
+#game .count-users #users-flex #brukere #user-rem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+#game .count-users #users-flex #brukere #user-rem div {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+#game .count-users #users-flex #brukere #user-rem div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+#game .count-users #users-flex #brukere #user-rem .user {
+  text-align: center;
+  width: 70px;
+}
+#game .count-users #users-flex #brukere #user-rem .user button {
+  width: calc(50% - 2px);
+  padding: 10px;
+  border: 0px solid white;
+  background-color: #CECECE;
+}
+#game .count-users #users-flex #brukere #user-rem .remUserBtn {
+  display: block;
+  margin-top: 50%;
+  width: 100%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: #CECECE;
+}
+#game .count-users #users-flex #addUserBtn {
+  display: block;
+  margin: auto;
+}
+#game .count-users #users-flex #addUserInput {
+  display: block;
+  margin-left: auto;
+  width: 100%;
+}
+
+#intro {
+  animation: colorchange 3s;
+  /* animation-name followed by duration in seconds */
+  /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 3s;
+  /* Chrome and Safari */
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#intro img {
+  width: 60vw;
+}
+
+@keyframes colorchange {
+  0% {
+    background: red;
+  }
+  25% {
+    background: yellow;
+  }
+  50% {
+    background: blue;
+  }
+  75% {
+    background: green;
+  }
+  100% {
+    background: red;
+  }
+}
+@-webkit-keyframes colorchange {
+  0% {
+    background: red;
+  }
+  25% {
+    background: yellow;
+  }
+  50% {
+    background: blue;
+  }
+  75% {
+    background: green;
+  }
+  100% {
+    background: red;
+  }
 }
 
 /*# sourceMappingURL=hvit.css.map */

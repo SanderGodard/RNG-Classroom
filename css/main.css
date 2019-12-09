@@ -391,7 +391,14 @@ main .quote {
   border-color: #303030;
 }
 
-.modes {
+.modesP {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 20px;
+}
+.modesP .modes {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -405,7 +412,7 @@ main .quote {
           justify-content: center;
   margin: 20px 10px;
 }
-.modes a {
+.modesP .modes a {
   padding: 8px;
   -ms-flex-item-align: end;
       align-self: flex-end;
