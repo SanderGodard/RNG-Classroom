@@ -535,73 +535,104 @@ main .quote {
   margin: 3px;
 }
 
-#container {
+#addUsersForm {
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 100%;
-  width: 80%;
-  margin: auto;
+  padding: 5vmax;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-
-#users, #buttons {
-  height: 100%;
-  width: 40%;
+#addUsersForm #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
 }
-
-#users {
-  height: inherit;
-  text-align: right;
+#addUsersForm #container #users, #addUsersForm #container #buttons {
+  width: 45%;
+  margin: 0 10px;
 }
-#users input {
+#addUsersForm #container #users input, #addUsersForm #container #users button, #addUsersForm #container #buttons input, #addUsersForm #container #buttons button {
+  width: 100%;
   margin-bottom: 20px;
-  padding: 5px;
   font-size: 1em;
-}
-
-button {
-  display: block;
-  margin-bottom: 5%;
+  display: inline-block;
   padding: 10px;
   font-size: 1em;
 }
-
-.flex-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#addUsersForm #container #users label, #addUsersForm #container #buttons label {
+  height: 1.25em;
+  margin: 0;
+  line-height: 1.25;
+}
+#addUsersForm #container #users button, #addUsersForm #container #buttons button {
+  margin: 1.25em auto 20px;
 }
 
-#chart {
+#game {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 5vmax;
+}
+#game text {
+  font-size: 2.5em;
+}
+#game input, #game button {
+  width: 50%;
+  font-size: 1em;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1em;
+}
+#game .midtstill {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: calc(100vh - 10vmax);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#game .midtstill #chart {
   width: 500px;
   height: 500px;
   top: 0;
   left: 0;
 }
-
-#question {
+#game .midtstill #question {
   width: 310px;
   line-height: inherit;
   text-align: center;
 }
-#question span {
-  display: block;
-  margin-top: 230px;
+#game .midtstill #question span {
   font-size: 50px;
   font-weight: bold;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  padding-left: 10px;
 }
-#question div {
-  display: block;
-  height: 460px;
-  margin-top: 27px;
-}
-
-.count-users {
+#game .count-users {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -609,62 +640,68 @@ button {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-
-.user {
+#game .count-users button {
+  border: 0px solid white;
+}
+#game .count-users .countdown #timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
-  display: block;
-  width: 70px;
+  height: calc(100vh - 10vmax);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-
-#brukere {
-  display: block;
-  margin: auto;
-  width: 170px;
+#game .count-users .countdown #timer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-#users-flex {
-  width: 30%;
+#game .count-users .countdown #timer div .timerBtn {
+  margin: 1px;
 }
-
-#addUserBtn {
-  display: block;
-  margin: auto;
+#game .count-users .countdown #timer div #startBtn {
+  background-color: green;
 }
-
-#addUserInput {
-  display: block;
-  margin-left: auto;
+#game .count-users .countdown #timer div #stopBtn {
+  background-color: red;
 }
-
-#countdown {
+#game .count-users .countdown #timer div #resetBtn {
+  background-color: yellow;
+}
+#game .count-users .countdown #timer #countdown {
   font-size: 5em;
   font-weight: bold;
 }
-
-.timerBtn {
-  height: 40px;
-  width: 75px;
+#game .count-users #users-flex {
+  width: 30%;
 }
-
-#timer {
+#game .count-users #users-flex #brukere {
   display: block;
-  margin-top: 50%;
-  text-align: center;
+  margin: auto;
+  width: 170px;
+  overflow: auto;
+  height: calc(100vh - 10vmax);
 }
-
-#startBtn {
-  background-color: green;
-}
-
-#stopBtn {
-  background-color: red;
-}
-
-#resetBtn {
-  background-color: yellow;
-}
-
-#user-rem {
+#game .count-users #users-flex #brukere #user-rem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -673,12 +710,63 @@ button {
           justify-content: space-between;
   margin-bottom: 10px;
   padding-bottom: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  justify-content: space-between;
   border-bottom: 1px solid black;
 }
-
-.remUserBtn {
+#game .count-users #users-flex #brukere #user-rem div {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+#game .count-users #users-flex #brukere #user-rem div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+#game .count-users #users-flex #brukere #user-rem .user {
+  text-align: center;
+  width: 70px;
+}
+#game .count-users #users-flex #brukere #user-rem .user button {
+  width: calc(50% - 2px);
+  padding: 10px;
+  border: 0px solid white;
+  background-color: #3E3E3E;
+}
+#game .count-users #users-flex #brukere #user-rem .remUserBtn {
   display: block;
   margin-top: 50%;
+  width: 100%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: #3E3E3E;
+}
+#game .count-users #users-flex #addUserBtn {
+  display: block;
+  margin: auto;
+}
+#game .count-users #users-flex #addUserInput {
+  display: block;
+  margin-left: auto;
+  width: 100%;
 }
 
 #intro {
@@ -691,6 +779,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

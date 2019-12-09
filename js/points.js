@@ -15,7 +15,7 @@ if (sessionStorage.getItem("pointsArray") == undefined) {
 
 
 document.body.onload = function () {
-    usersDiv = document.getElementById("users");
+    usersDiv = document.getElementById("brukere");
     document.getElementById("addUserBtn").setAttribute("onclick", "addUsers(" + (userArray.length) + ")");
     for (var index = 0; index < (userArray.length); index++) {
         var user = userArray[index];
@@ -52,9 +52,11 @@ document.body.onload = function () {
         var yDiv = document.createElement("div");
         yDiv.appendChild(remUserBtn);
 
+        wr = document.createElement("div");
         userDiv.appendChild(pointCounter);
-        userDiv.appendChild(minusBtn);
-        userDiv.appendChild(plusBtn);
+        userDiv.appendChild(wr);
+        wr.appendChild(minusBtn);
+        wr.appendChild(plusBtn);
         userDiv.appendChild(document.createElement("br"));
 
         xDiv.appendChild(userDiv);

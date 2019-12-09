@@ -10,10 +10,12 @@
     <form id="addUsersForm">
         <div id="container">
             <div id="users">
-                <input autofocus name="u0" id="u0" class="inputUsers">
-                <br>
-                <input name="u1" id="u1" class="inputUsers">
-                <br>
+                <label for="u0">Spiller 1
+                  <input autofocus name="u0" id="u0" placeholder="Joe" class="inputUsers">
+                </label>
+                <label for="u2">Spiller 2
+                  <input name="u1" id="u1" placeholder="Mama" class="inputUsers">
+                </label>
             </div>
             <div id="buttons">
                 <div id="remAddButtons">
@@ -21,7 +23,6 @@
                     <button type="button" onclick="remUsers(1)" id="remUsersButton">Fjern deltager</button>
                 </div>
                 <button type="submit" onclick="startGame(0)" id="startGameButton">Start Spillet</button>
-                <br>
             </div>
         </div>
     </form>

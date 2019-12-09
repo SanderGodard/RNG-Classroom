@@ -12,7 +12,7 @@ playIntro();
 function playGame() {
     var intro = document.getElementById("intro");
     intro.style.display = "none";
-    game.style.display = "block";
+    game.style.display = "flex";
 }
 
 setTimeout(function () {

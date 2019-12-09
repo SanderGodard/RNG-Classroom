@@ -12,13 +12,17 @@ function addUsers() {
     var div = document.getElementById("users");
     var remButton = document.getElementById("remUsersButton")
     var newInput = document.createElement("input");
+    var label = document.createElement("label");
 
     newInput.setAttribute("id", "u" + antUsers);
     newInput.setAttribute("name", "u" + antUsers);
     newInput.setAttribute("class", "inputUsers");
+    label.setAttribute("for", "u" + antUsers);
+    label.innerHTML = "Spiller " + (parseInt(antUsers) + 1);
 
-    div.appendChild(newInput);
-    div.appendChild(document.createElement("br"));
+
+    div.appendChild(label);
+    label.appendChild(newInput);
 
     newInput.focus();
 

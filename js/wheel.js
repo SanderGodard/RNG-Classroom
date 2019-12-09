@@ -68,6 +68,7 @@ arcs.append("path")
 arcs.append("text").attr("transform", function (d) {
         d.innerRadius = 0;
         d.outerRadius = r;
+        //d.attr("style", "font-size: 3em");
         d.angle = (d.startAngle + d.endAngle) / 2;
         return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")translate(" + (d.outerRadius - 10) + ")";
     })

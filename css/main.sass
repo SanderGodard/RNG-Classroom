@@ -445,136 +445,187 @@ main
 
 
 // Quiz game
-#container
+#addUsersForm
+  width: 100vw
+  height: 100vh
   display: flex
-  justify-content: space-around
-  height: 100%
-  width: 80%
-  margin: auto
+  padding: 5vmax
+  justify-content: center
+  align-items: flex-start
 
-#users, #buttons
-  height: 100%
-  width: 40%
+  #container
+    display: flex
+    justify-content: space-between
+    width: 60%
 
-#users
-  height: inherit
-  text-align: right
+    #users, #buttons
+      width: 45%
+      margin: 0 10px
 
-  input
-    margin-bottom: 20px
-    padding: 5px
+      input, button
+        width: 100%
+        margin-bottom: 20px
+        font-size: 1em
+        display: inline-block
+        padding: 10px
+        font-size: 1em
+
+      label
+        height: 1.25em
+        margin: 0
+        line-height: 1.25
+
+      button
+        margin: 1.25em auto 20px
+
+
+#game
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+  justify-content: space-between
+  align-items: flex-start
+  padding: 5vmax
+
+  text
+    font-size: 2.5em
+
+  input, button
+    width: 50%
+    font-size: 1em
+    display: inline-block
+    padding: 10px
     font-size: 1em
 
-button
-  display: block
-  margin-bottom: 5%
-  padding: 10px
-  font-size: 1em
+  .midtstill
+    display: inline-flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    height: calc(100vh - 10vmax)
+    align-items: center
+
+
+    #chart
+      width: 500px
+      height: 500px
+      top: 0
+      left: 0
+
+    #question
+      width: 310px
+      line-height: inherit
+      text-align: center
+
+      span
+        font-size: 50px
+        font-weight: bold
+
+
+  .count-users
+    display: flex
+    width: 46%
+    justify-content: space-around
+
+    button
+      border: 0px solid white
+
+    .countdown
+
+
+      #timer
+        display: flex
+        text-align: center
+        height: calc(100vh - 10vmax)
+        align-items: center
+        flex-flow: column nowrap
+        justify-content: center
+
+        div
+          display: flex
+          flex-flow: row nowrap
+          justify-content: center
+          align-items: center
+
+          .timerBtn
+            margin: 1px
+
+          #startBtn
+            background-color: green
+
+          #stopBtn
+            background-color: red
+
+          #resetBtn
+            background-color: yellow
+
+
+        #countdown
+          font-size: 5em
+          font-weight: bold
+
+
+    #users-flex
+      width: 30%
+
+      #brukere
+        display: block
+        margin: auto
+        width: 170px
+        overflow: auto
+        height: calc(100vh - 10vmax)
+
+        #user-rem
+          display: flex
+          justify-content: space-between
+          margin-bottom: 10px
+          padding-bottom: 10px
+          flex-flow: row nowrap
+          justify-content: space-between
+          border-bottom: 1px solid black
+
+          div
+            text-align: center
+            display: flex
+            flex-flow: column nowrap
+
+            div
+              display: flex
+              justify-content: space-around
+              align-items: center
+              flex-flow: row nowrap
+
+
+          .user
+            text-align: center
+            width: 70px
+
+            button
+              //margin-right: 1px
+              width: calc(50% - 2px)
+              padding: 10px
+              border: 0px solid white
+              background-color: $SidebarColor
+
+          .remUserBtn
+            display: block
+            margin-top: 50%
+            width: 100%
+            align-self: flex-end
+            background-color: $SidebarColor
+
+
+      #addUserBtn
+        display: block
+        margin: auto
+
+
+      #addUserInput
+        display: block
+        margin-left: auto
+        width: 100%
 
 
 
-.flex-wrapper
-  display: flex
-
-
-#chart
-  width: 500px
-  height: 500px
-  top: 0
-  left: 0
-
-
-#question
-  width: 310px
-  line-height: inherit
-  text-align: center
-
-  span
-    display: block
-    margin-top: 230px
-    font-size: 50px
-    font-weight: bold
-    transform: translate(0, -50%)
-    padding-left: 10px
-
-  div
-    display: block
-    height: 460px
-    margin-top: 27px
-    //border: 1px solid white
-
-
-.count-users
-  display: flex
-  width: 46%
-  justify-content: space-around
-
-
-.user
-  text-align: center
-  display: block
-  width: 70px
-
-
-#brukere
-  display: block
-  margin: auto
-  width: 170px
-
-
-#users-flex
-  width: 30%
-
-
-#addUserBtn
-  display: block
-  margin: auto
-
-
-#addUserInput
-  display: block
-  margin-left: auto
-
-
-#countdown
-  font-size: 5em
-  font-weight: bold
-
-
-.timerBtn
-  height: 40px
-  width: 75px
-
-
-#timer
-  display: block
-  margin-top: 50%
-  text-align: center
-
-
-#startBtn
-  background-color: green
-
-
-#stopBtn
-  background-color: red
-
-
-#resetBtn
-  background-color: yellow
-
-
-#user-rem
-  display: flex
-  justify-content: space-between
-  margin-bottom: 10px
-  padding-bottom: 10px
-  border-bottom: 1px solid black
-
-
-.remUserBtn
-  display: block
-  margin-top: 50%
 
 
 #intro
@@ -585,6 +636,7 @@ button
   /* Chrome and Safari */
   height: 100vh
   display: flex
+  width: 100vw
   justify-content: center
   align-items: center
 

@@ -16,36 +16,34 @@
 
 
 <body>
-    <div id="intro">
-        <img src="elements/dragansQuiz.png">
+  <div id="intro">
+    <img src="elements/dragansQuiz.png">
+  </div>
+  <div id="game">
+    <div class="midtstill">
+      <div id="chart"></div>
+      <div id="question">
+        <span></span>
+      </div>
     </div>
-    <div id="game">
-        <div class="flex-wrapper">
-            <div id="chart"></div>
-            <div id="question">
-                <div>
-                    <span></span>
-                </div>
-            </div>
-            <div class="count-users">
-
-                <div class="countdown">
-                    <div id="timer">
-                        <div id="countdown">25</div>
-                        <button class="timerBtn" id="startBtn" onclick="startTimer()">Start</button>
-                        <button class="timerBtn" id="stopBtn" onclick="stopTimer()">Stop</button>
-                        <button class="timerBtn" id="resetBtn" onclick="resetTimer()">Reset</button>
-                    </div>
-                </div>
-                <div id="users-flex">
-                    <div id="brukere">
-                    </div>
-                    <br>
-                    <button id="addUserBtn" onclick="addUsers()">Flere som vil slite?</button>
-                </div>
-            </div>
+    <div class="count-users">
+      <div class="countdown">
+        <div id="timer">
+          <div id="countdown">25</div>
+          <div>
+            <button class="timerBtn" id="startBtn" onclick="startTimer()">Start</button>
+            <button class="timerBtn" id="stopBtn" onclick="stopTimer()">Stop</button>
+            <button class="timerBtn" id="resetBtn" onclick="resetTimer()">Reset</button>
+          </div>
         </div>
+      </div>
+      <div id="users-flex">
+        <div id="brukere">
+        </div>
+        <button id="addUserBtn" onclick="addUsers()">Flere som vil slite?</button>
+      </div>
     </div>
+  </div>
 </body>
 
 </html>
