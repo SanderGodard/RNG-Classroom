@@ -95,22 +95,27 @@ function buttonsActive(state) {
     if (state) {
       buttons[i].style.cursor = "pointer";
       buttons[i].style.pointerEvents = "auto";
+      ac = true;
     } else {
       buttons[i].style.cursor = "not-allowed";
       buttons[i].style.pointerEvents = "none";
+      ac = false;
     }
   }
 }
 
 document.body.onkeyup = function(e){
-    if(e.keyCode == 32){
-        runRNG();
-    }
+  if(e.keyCode == 32 && ac == true){
+    runRNG();
+  }
 }
 
+
+ac = true;
 function runRNG() {
   // sets class "button" to be disabled...
   buttonsActive(false);
+  ac = false;
   if (y >= antall) {
     resetRecent();
   }
