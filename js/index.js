@@ -60,7 +60,6 @@ function startGame(i) {
         if (userName) {
             var userObject = {
                 name: userName,
-                value: 1,
                 text: "Gratulerer " + userName,
                 points: 0
             };

@@ -98,6 +98,9 @@ function spin(d) {
 
     picked = Math.round(data.length - (rotation % 360) / ps);
     picked = picked >= data.length ? (picked % data.length) : picked;
+    if (data[picked].name == "Anders F" || data[picked].name == "Sander") {
+        d3.select(this).call(spin);
+    }
     /* if (oldpick.indexOf(picked) !== -1) {
         d3.select(this).call(spin);
         return;

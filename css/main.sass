@@ -10,12 +10,10 @@ $TitleColor: #303030
 $W: #FAFAFA
 //$W: #1D1D1D
 
-
 $amount: 3
 
 $Shadow: 0px 3px 5px rgba(0,0,0,0.3)
 $BigShadow: 0px 3px 9px 3px rgba(0,0,0,0.4)
-
 
 // ============ Mobile
 $MobileS: "only screen and (max-width : 334px)"
@@ -36,7 +34,6 @@ $Laptop: "only screen and (max-width : 1025px)"
 // ============ Desktop
 $Desktop: "only screen and (max-width : 1290px)"
 
-
 // ============ Transitions
 $Fast: all 0.1s ease-in-out
 $Medium: all 0.25s ease-in-out
@@ -52,7 +49,6 @@ html
   -webkit-locale: "nb" !important
   -webkit-tap-highlight-color: rgba(0,0,0,0)
 
-
 body
   display: flex
   justify-content: space-between
@@ -67,12 +63,10 @@ body
   overflow-x: hidden !important
   font-size: 12px
 
-
 *
   box-sizing: border-box
   margin: 0
   padding: 0
-  /*border: 1px solid blue*/
   border-collapse: collapse
   user-select: none
 
@@ -94,12 +88,10 @@ img
   opacity: 1
   color: $W
 
-
 ::selection
   background: rgba(0,0,0,0)
   color: $W
   opacity: 1
-
 
 ::-webkit-scrollbar
   width: 5px
@@ -107,7 +99,6 @@ img
   right: 0
   //border-radius: 2.5px
   box-shadow: $Shadow
-
 
 ::-webkit-scrollbar-thumb
   transition: all 0.3s ease-in-out
@@ -122,7 +113,6 @@ img
 .material
   font-family: 'Material Icons', 'Segoe UI', sans-serif
   font-size: 1.7em
-
 
 .sidebar
   box-shadow: $BigShadow
@@ -198,7 +188,6 @@ img
                 cursor: auto
                 pointer-events: none
 
-
   &.fat
     width: 30%
     min-width: 500px
@@ -210,7 +199,6 @@ img
 
     .info
       padding: 0
-
 
 .antall
   width: 15%
@@ -282,7 +270,6 @@ img
   .hidden
     display: none
 
-
 main
   padding-top: 120px
   //margin-bottom: 225px
@@ -331,7 +318,6 @@ main
     max-width: 600px
     word-break: keep-all
 
-
 .reset
   transition: $Fast
   background-color: $SidebarColor
@@ -341,6 +327,7 @@ main
   margin: 5px 60px 0 0
   padding: 5px
   font-size: 1.2em
+  cursor: pointer
 
   &:hover
     transition: $Fast
@@ -349,7 +336,6 @@ main
   &.active
     background-color: $TitleColor
     border-color: $TitleColor
-
 
 .modesP
   position: fixed
@@ -368,7 +354,6 @@ main
       padding: 8px
       align-self: flex-end
       margin: 2px
-
 
 .plassRun
   background-color: $BGColor
@@ -395,7 +380,6 @@ main
     box-shadow: $Shadow
     background-color: $TitleColor
     transform: scale(1.05)
-
 
 .groupings
   background-color: $BGColor
@@ -449,7 +433,6 @@ main
       margin: 3px
       //width: 130px
 
-
 // Quiz game
 #addUsersForm
   width: 100vw
@@ -484,7 +467,6 @@ main
       button
         margin: 1.25em auto 20px
 
-
 #game
   width: 100vw
   height: 100vh
@@ -492,16 +474,16 @@ main
   justify-content: space-between
   align-items: flex-start
   padding: 5vmax
-
-  text
-    font-size: 2.5em
+  color: $W
 
   input, button
+    color: $W
     width: 50%
     font-size: 1em
     display: inline-block
     padding: 10px
     font-size: 1em
+    cursor: pointer
 
   .midtstill
     display: inline-flex
@@ -510,12 +492,14 @@ main
     height: calc(100vh - 10vmax)
     align-items: center
 
-
     #chart
       width: 500px
       height: 500px
       top: 0
       left: 0
+
+      text
+      font-size: 2.5em
 
     #question
       width: 310px
@@ -526,7 +510,6 @@ main
         font-size: 50px
         font-weight: bold
 
-
   .count-users
     display: flex
     width: 46%
@@ -536,7 +519,6 @@ main
       border: 0px solid white
 
     .countdown
-
 
       #timer
         display: flex
@@ -554,6 +536,7 @@ main
 
           .timerBtn
             margin: 1px
+            color: black
 
           #startBtn
             background-color: green
@@ -564,11 +547,9 @@ main
           #resetBtn
             background-color: yellow
 
-
         #countdown
           font-size: 5em
           font-weight: bold
-
 
     #users-flex
       width: 30%
@@ -600,7 +581,6 @@ main
               align-items: center
               flex-flow: row nowrap
 
-
           .user
             text-align: center
             width: 70px
@@ -619,27 +599,18 @@ main
             align-self: flex-end
             background-color: $SidebarColor
 
-
       #addUserBtn
         display: block
         margin: auto
-
 
       #addUserInput
         display: block
         margin-left: auto
         width: 100%
 
-
-
-
-
 #intro
   animation: colorchange 3s
-  /* animation-name followed by duration in seconds*/
-  /* you could also use milliseconds (ms) or something like 2.5s */
   -webkit-animation: colorchange 3s
-  /* Chrome and Safari */
   height: 100vh
   display: flex
   width: 100vw
@@ -648,7 +619,6 @@ main
 
   img
     width: 60vw
-
 
 @keyframes colorchange
   0%
@@ -661,7 +631,6 @@ main
     background: green
   100%
     background: red
-
 
 @-webkit-keyframes colorchange
   0%
