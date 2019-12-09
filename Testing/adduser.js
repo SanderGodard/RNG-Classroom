@@ -41,7 +41,6 @@ function newUser(userId) {
 function remUser(userId) {
     userArray = JSON.parse(sessionStorage.getItem("usersList"));
     userArray.splice(userId, 1);
-    console.log(userArray);
     userJson = JSON.stringify(userArray);
     sessionStorage.setItem("usersList", userJson);
     document.location.reload();
