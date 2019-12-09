@@ -2,7 +2,7 @@
   startBtn = document.getElementById("startBtn");
   stopBtn = document.getElementById("stopBtn");
   resetBtn = document.getElementById("resetBtn");
-  audioTrivia = new Audio('trivia.mp3');
+  audioTrivia = new Audio('elements/trivia.mp3');
 
   function startTimer(x) {
     if (x == "new") {
@@ -22,7 +22,7 @@
       if (timeLeft <= 0) {
         clearInterval(downloadTimer);
         document.getElementById("countdown").innerHTML = "Dårlig?";
-        var audio = new Audio('bell.mp3');
+        var audio = new Audio('elements/bell.mp3');
         audio.play();
         audioTrivia.pause();
         audioTrivia.currentTime = 0;

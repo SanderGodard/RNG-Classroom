@@ -79,7 +79,7 @@ arcs.append("text").attr("transform", function (d) {
 container.on("click", spin);
 
 function spin(d) {
-    var spinAudio = new Audio("spin.mp3");
+    var spinAudio = new Audio("elements/spin.mp3");
     spinAudio.play();
     container.on("click", null);
 
