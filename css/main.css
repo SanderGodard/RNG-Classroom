@@ -465,7 +465,8 @@ main {
       #game .count-users #users-flex #addUserInput {
         display: block;
         margin-left: auto;
-        width: 100%; }
+        width: 100%;
+        color: black; }
 
 #intro {
   animation: colorchange 3s;
