@@ -100,6 +100,8 @@ function spin(d) {
     picked = picked >= data.length ? (picked % data.length) : picked;
     if (data[picked].name == "Anders F" || data[picked].name == "Sander") {
         d3.select(this).call(spin);
+        spinAudio.pause();
+        return;
     }
     /* if (oldpick.indexOf(picked) !== -1) {
         d3.select(this).call(spin);
