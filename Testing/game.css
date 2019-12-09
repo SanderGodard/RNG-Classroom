@@ -126,7 +126,13 @@ text {
     -webkit-animation: colorchange 3s;
     /* Chrome and Safari */
     height: 100vh;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro img {
+    width: 60vw
 }
 
 @keyframes colorchange {
