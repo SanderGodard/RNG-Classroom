@@ -1,46 +1,49 @@
 <html>
 
 <head>
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" href="css/main.css">
+  <script src="js/index.js"></script>
+  <script src="js/main.js"></script>
+  <link id="style" rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
 </head>
 
 <body>
 
-    <form id="addUsersForm">
-        <div id="container">
-            <div id="users">
-                <label for="u0">Spiller 1
-                  <input autofocus name="u0" id="u0" placeholder="Joe" class="inputUsers">
-                </label>
-                <label for="u2">Spiller 2
-                  <input name="u1" id="u1" placeholder="Mama" class="inputUsers">
-                </label>
-            </div>
-            <div id="buttons">
-                <div id="remAddButtons">
-                    <button type="button" onclick="addUsers(2)" id="addUsersButton">Legg til deltager</button>
-                    <button type="button" onclick="remUsers(1)" id="remUsersButton">Fjern deltager</button>
-                </div>
-                <button type="submit" onclick="startGame(0)" id="startGameButton">Start Spillet</button>
-            </div>
-        </div>
-    </form>
-    <div class="modesP">
-      <div class="modes">
-        Moduser: 
-        <a href="quiz.html" class="reset button active">Quiz</a>
-        <a href="javascript:void(0)" class="reset button">Plasser</a>
-        <a href="index.html" class="reset button">Random</a>
-        <a href="index.html#order" class="reset button">Rekkefølge</a>
+  <form id="addUsersForm">
+    <div id="container">
+      <div id="users">
+        <label for="u0">Spiller 1
+          <input autofocus name="u0" id="u0" placeholder="Joe" class="inputUsers">
+        </label>
+        <label for="u2">Spiller 2
+          <input name="u1" id="u1" placeholder="Mama" class="inputUsers">
+        </label>
       </div>
-
-      <div class="modes">
-        Farger: 
-        <a href="javascript:void(0)" class="reset" onclick="fargeMode('hvit')">Hvit</a>
-        <a href="javascript:void(0)" class="reset" onclick="fargeMode('svart')">Svart</a>
-        <a href="javascript:void(0)" class="reset" onclick="fargeMode('rosa')">Rosa</a>
+      <div id="buttons">
+        <div id="remAddButtons">
+          <button type="button" onclick="addUsers(2)" id="addUsersButton">Legg til deltager</button>
+          <button type="button" onclick="remUsers(1)" id="remUsersButton">Fjern deltager</button>
+        </div>
+        <button type="submit" onclick="startGame(0)" id="startGameButton">Start Spillet</button>
       </div>
     </div>
+  </form>
+  <div class="modesP">
+    <div class="modes">
+      Moduser: 
+      <a href="quiz.html" class="reset button active">Quiz</a>
+      <a href="javascript:void(0)" class="reset button">Plasser</a>
+      <a href="index.html" class="reset button">Random</a>
+      <a href="index.html#order" class="reset button">Rekkefølge</a>
+    </div>
+
+    <div class="modes">
+      Farger: 
+      <a href="javascript:void(0)" class="reset" onclick="fargeMode('hvit')">Hvit</a>
+      <a href="javascript:void(0)" class="reset" onclick="fargeMode('svart')">Svart</a>
+      <a href="javascript:void(0)" class="reset" onclick="fargeMode('rosa')">Rosa</a>
+    </div>
+  </div>
 </body>
+
 </html>

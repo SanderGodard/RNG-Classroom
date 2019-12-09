@@ -37,10 +37,10 @@ function remUsers() {
     var div = document.getElementById("users");
     var remButton = document.getElementById("remUsersButton");
     var input = document.getElementById("u" + (antUsers));
+    var label = input.parentNode;
 
     console.log(div.childNodes);
-    input.remove();
-    div.removeChild(div.childNodes[(div.childNodes.length - 2)]);
+    label.remove();
 
 
     antUsers = antUsers - 1;

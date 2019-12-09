@@ -41,6 +41,10 @@ function newUser(userId) {
 function remUser(userId) {
     userArray = JSON.parse(sessionStorage.getItem("usersList"));
     userArray.splice(userId, 1);
+    if (userArray.length == 0) {
+        alert("Du må legge til en bruker først, kan ikke være null");
+        return;
+    }
     userJson = JSON.stringify(userArray);
     sessionStorage.setItem("usersList", userJson);
     document.location.reload();
