@@ -1,7 +1,11 @@
 document.body.onkeyup = function (e) {
-    if (e.keyCode == 32) {
-        spin();
+    console.log("keypress: " + sessionStorage.getItem("wheelSpin"));
+    if (sessionStorage.getItem("wheelSpin") !== "true" || sessionStorage.getItem("wheelSpin") == null) {
+        if (e.keyCode == 32) {
+            spin();
+        }
     }
+
 }
 
 var padding = {
@@ -85,6 +89,9 @@ arcs.append("text").attr("transform", function (d) {
 container.on("click", spin);
 
 function spin(d) {
+    sessionStorage.setItem("wheelSpin", "true");
+    spinWheel = true;
+    console.log("spin: " + sessionStorage.getItem("wheelSpin"));
     var spinAudio = new Audio("elements/spin.mp3");
     spinAudio.play();
     container.on("click", null);
@@ -127,7 +134,7 @@ function spin(d) {
         .each("end", function () {
             //mark question as seen
             /* d3.select(".slice:nth-child(" + (picked + 1) + ") path")
-                .attr("fill", "#111"); */
+            .attr("fill", "#111"); */
             //populate question
             d3.select("#question span")
                 .text(data[picked].text);
@@ -135,6 +142,7 @@ function spin(d) {
             spinAudio.pause();
             spinAudio.currentTime = 0;
             container.on("click", spin);
+            sessionStorage.removeItem("wheelSpin");
         });
 }
 //make arrow
