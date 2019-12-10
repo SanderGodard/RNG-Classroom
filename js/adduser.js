@@ -16,6 +16,7 @@ function addUsers(userId) {
 
     btn.innerHTML = "Legg til";
     btn.setAttribute("onclick", "newUser(" + userId + ")");
+    input.focus();
 }
 
 function newUser(userId) {

@@ -4,16 +4,14 @@ footer = document.getElementsByClassName("modesP")[0];
 footer.style.display = "none";
 introMusic = document.getElementById("introSound");
 introMusic.currentTime = 32;
+introMusic.volume = 0.05;
 introMusic.play();
+intro = document.getElementById("intro");
+pause = true;
 
 
-function playIntro() {
-    console.log("mordi");
-}
-playIntro();
 
 function playGame() {
-    var intro = document.getElementById("intro");
     intro.style.display = "none";
     footer.style.display = "block";
     game.style.display = "flex";
@@ -23,3 +21,22 @@ function playGame() {
 setTimeout(function () {
     playGame();
 }, 3000);
+
+document.body.onkeyup = function (e) {
+    if (e.keyCode == 80) {
+        if (pause) {
+            intro.style.display = "flex";
+            game.style.display = "none";
+            footer.style.display = "none";
+            pauseMusic = new Audio("elements/elevator.mp3");
+            pauseMusic.loop = true;
+            pauseMusic.volume = 0.1;
+            pauseMusic.play();
+            pause = false;
+        } else {
+            pauseMusic.pause();
+            pause = true;
+            playGame();
+        }
+    }
+}
