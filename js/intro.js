@@ -9,7 +9,12 @@ introMusic.play();
 intro = document.getElementById("intro");
 pause = true;
 
-
+window.addEventListener('keydown', function (e) {
+    if (e.keyCode == 32 && e.target == document.body) {
+        e.preventDefault();
+    }
+});
+//bare sånn at space ikke skal scrolle
 
 function playGame() {
     intro.style.display = "none";

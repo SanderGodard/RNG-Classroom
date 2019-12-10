@@ -77,7 +77,6 @@ function addPoint(userId) {
     userJson = JSON.stringify(userArray);
     sessionStorage.setItem("usersList", userJson);
     document.getElementById("pluss" + userId).blur();
-    //pointCounter.parentNode.children[2].children[1].blur();
 }
 
 function remPoint(userId) {
@@ -89,5 +88,4 @@ function remPoint(userId) {
   userJson = JSON.stringify(userArray);
   sessionStorage.setItem("usersList", userJson);
   document.getElementById("minus" + userId).blur();
-  //pointCounter.parentNode.children[2].children[0].blur();
 }
