@@ -28,7 +28,8 @@ setTimeout(function () {
 }, 3000);
 
 document.onkeyup = function (e) {
-    if (e.keyCode == 80) {
+    if (e.keyCode == 80 && e.target == document.body) {
+        //sånn at man kan skrive "p" i input
         if (pause) {
             intro.style.display = "flex";
             game.style.display = "none";
