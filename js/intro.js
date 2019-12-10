@@ -22,7 +22,7 @@ setTimeout(function () {
     playGame();
 }, 3000);
 
-document.body.onkeyup = function (e) {
+document.onkeyup = function (e) {
     if (e.keyCode == 80) {
         if (pause) {
             intro.style.display = "flex";
