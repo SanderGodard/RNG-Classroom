@@ -111,16 +111,16 @@ function spin(d) {
 
     picked = Math.round(data.length - (rotation % 360) / ps);
     picked = picked >= data.length ? (picked % data.length) : picked;
-    if (
-        data[picked].name.toLowerCase() == "anders f" ||
-        data[picked].name.toLowerCase() == "sander" ||
-        data[picked].name.toLowerCase() == "andersf" ||
-        data[picked].name.toLowerCase() == "anders") {
-
-        d3.select(this).call(spin);
-        spinAudio.pause();
-        return;
-    }
+    // if (
+    //     data[picked].name.toLowerCase() == "anders f" ||
+    //     data[picked].name.toLowerCase() == "sander" ||
+    //     data[picked].name.toLowerCase() == "andersf" ||
+    //     data[picked].name.toLowerCase() == "anders") {
+    //
+    //     d3.select(this).call(spin);
+    //     spinAudio.pause();
+    //     return;
+    // }
     /* if (oldpick.indexOf(picked) !== -1) {
         d3.select(this).call(spin);
         return;
