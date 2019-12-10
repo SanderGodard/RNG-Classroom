@@ -1,15 +1,16 @@
 document.body.onkeyup = function (e) {
-    console.log("keypress: " + sessionStorage.getItem("wheelSpin"));
+    //console.log("keypress: " + sessionStorage.getItem("wheelSpin"));
     if (sessionStorage.getItem("wheelSpin") !== "true" || sessionStorage.getItem("wheelSpin") == null) {
         if (e.keyCode == 32) {
             spin();
+            //e.preventDefault();
         }
     }
 
 }
 
 var padding = {
-        top: 20,
+        top: 0,
         right: 40,
         bottom: 0,
         left: 0
@@ -91,7 +92,7 @@ container.on("click", spin);
 function spin(d) {
     sessionStorage.setItem("wheelSpin", "true");
     spinWheel = true;
-    console.log("spin: " + sessionStorage.getItem("wheelSpin"));
+    //console.log("spin: " + sessionStorage.getItem("wheelSpin"));
     var spinAudio = new Audio("elements/spin.mp3");
     spinAudio.play();
     container.on("click", null);

@@ -29,15 +29,18 @@ document.body.onload = function () {
         plusBtn.setAttribute("class", "plusBtn");
         plusBtn.setAttribute("onclick", "addPoint(" + index + ")");
         plusBtn.innerHTML = "+";
+        plusBtn.id = "pluss" + index;
 
         var minusBtn = document.createElement("button")
         minusBtn.setAttribute("class", "minusBtn");
         minusBtn.setAttribute("onclick", "remPoint(" + index + ")");
         minusBtn.innerHTML = "-";
+        minusBtn.id = "minus" + index;
 
         var remUserBtn = document.createElement("button");
         remUserBtn.setAttribute("class", "remUserBtn");
         remUserBtn.setAttribute("onclick", "remUser(" + index + ")");
+
         remUserBtn.innerHTML = "Fjern";
 
         var pointCounter = document.createElement("div");
@@ -73,14 +76,18 @@ function addPoint(userId) {
     userArray[userId].points = points;
     userJson = JSON.stringify(userArray);
     sessionStorage.setItem("usersList", userJson);
+    document.getElementById("pluss" + userId).blur();
+    //pointCounter.parentNode.children[2].children[1].blur();
 }
 
 function remPoint(userId) {
-    var points = userArray[userId].points;
-    var pointCounter = document.getElementById("point" + userId);
-    points = points - 1;
-    pointCounter.innerHTML = points;
-    userArray[userId].points = points;
-    userJson = JSON.stringify(userArray);
-    sessionStorage.setItem("usersList", userJson);
+  var points = userArray[userId].points;
+  var pointCounter = document.getElementById("point" + userId);
+  points = points - 1;
+  pointCounter.innerHTML = points;
+  userArray[userId].points = points;
+  userJson = JSON.stringify(userArray);
+  sessionStorage.setItem("usersList", userJson);
+  document.getElementById("minus" + userId).blur();
+  //pointCounter.parentNode.children[2].children[0].blur();
 }
