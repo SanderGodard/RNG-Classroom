@@ -5,6 +5,13 @@ div = document.getElementById("users");
 function addUsers(userId) {
 
     input.setAttribute("id", "addUserInput");
+    input.addEventListener('focus', (event) => {
+        document.body.onkeyup = function (e) {
+            if (e.keyCode == 13) {
+                newUser();
+            }
+        }
+    });
     document.getElementById("users-flex").insertBefore(input, btn);
 
     btn.innerHTML = "Legg til";
