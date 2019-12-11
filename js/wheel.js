@@ -9,6 +9,13 @@ document.body.onkeyup = function (e) {
 
 }
 
+window.addEventListener('keydown', function (e) {
+    if (e.keyCode == 32 && e.target == document.body) {
+        e.preventDefault();
+    }
+});
+//bare sånn at space ikke skal scrolle
+
 var padding = {
         top: 0,
         right: 40,
