@@ -1,13 +1,5 @@
 userArray = JSON.parse(sessionStorage.getItem("usersList"));
 
-function setPoint(id, value) {
-    var points = sessionStorage.getItem("pointsArray");
-    pointsArray = points.split(",");
-    pointsArray[id] = value;
-    var pointString = pointsArray.toString();
-    sessionStorage.setItem("pointsArray", pointString);
-}
-
 if (sessionStorage.getItem("pointsArray") == undefined) {
     var pointsString = "0,"
     sessionStorage.setItem("pointsArray", pointsString);
@@ -40,8 +32,13 @@ document.body.onload = function () {
         var remUserBtn = document.createElement("button");
         remUserBtn.setAttribute("class", "remUserBtn");
         remUserBtn.setAttribute("onclick", "remUser(" + index + ")");
-
         remUserBtn.innerHTML = "Fjern";
+
+        var editUserBtn = document.createElement("button");
+        editUserBtn.setAttribute("class", "remUserBtn");
+        editUserBtn.setAttribute("onclick", "editUser(" + index + ")");
+        editUserBtn.innerHTML = "Rediger";
+        editUserBtn.id = "editUser" + index;
 
         var pointCounter = document.createElement("div");
         pointCounter.setAttribute("id", "point" + index);
@@ -54,6 +51,7 @@ document.body.onload = function () {
         xDiv.id = "user-rem";
         var yDiv = document.createElement("div");
         yDiv.appendChild(remUserBtn);
+        yDiv.appendChild(editUserBtn);
 
         wr = document.createElement("div");
         userDiv.appendChild(pointCounter);
@@ -80,12 +78,12 @@ function addPoint(userId) {
 }
 
 function remPoint(userId) {
-  var points = userArray[userId].points;
-  var pointCounter = document.getElementById("point" + userId);
-  points = points - 1;
-  pointCounter.innerHTML = points;
-  userArray[userId].points = points;
-  userJson = JSON.stringify(userArray);
-  sessionStorage.setItem("usersList", userJson);
-  document.getElementById("minus" + userId).blur();
+    var points = userArray[userId].points;
+    var pointCounter = document.getElementById("point" + userId);
+    points = points - 1;
+    pointCounter.innerHTML = points;
+    userArray[userId].points = points;
+    userJson = JSON.stringify(userArray);
+    sessionStorage.setItem("usersList", userJson);
+    document.getElementById("minus" + userId).blur();
 }

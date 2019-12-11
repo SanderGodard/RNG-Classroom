@@ -57,3 +57,44 @@ function remUser(userId) {
     sessionStorage.setItem("usersList", userJson);
     document.location.reload();
 }
+
+function editUser(userId) {
+    var div = document.getElementById("user" + userId);
+    var userName = JSON.parse(sessionStorage.getItem("usersList"))[userId].name;
+
+    var editInput = document.createElement("input");
+    var changeBtn = document.getElementById("editUser" + userId);
+
+    changeBtn.setAttribute("onclick", "changeUser(" + userId + ")");
+    changeBtn.innerHTML = "Endre";
+
+    editInput.setAttribute("value", userName);
+    editInput.setAttribute("id", "editUser" + userId);
+    editInput.style.color = "black";
+    editInput.style.width = "100%";
+
+
+    while (div.firstChild) {
+        div.removeChild(div.firstChild);
+    }
+    div.appendChild(editInput);
+
+    editInput.addEventListener('focus', (event) => {
+        document.body.onkeyup = function (e) {
+            if (e.keyCode == 13) {
+                changeUser(userId);
+            }
+        }
+    });
+    editInput.focus();
+}
+
+function changeUser(userId) {
+    var editInput = document.getElementById("editUser" + userId);
+    var userArray = JSON.parse(sessionStorage.getItem("usersList"));
+    userArray[userId].name = editInput.value;
+    userArray[userId].text = "Gratulerer " + editInput.value;
+    userString = JSON.stringify(userArray);
+    sessionStorage.setItem("usersList", userString);
+    document.location.reload();
+}
