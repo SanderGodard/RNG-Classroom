@@ -38,12 +38,12 @@ img {
   user-select: none; }
 
 ::-moz-selection {
-  background: rgba(0, 0, 0, 0);
+  background: #CECECE;
   opacity: 1;
   color: #1D1D1D; }
 
 ::selection {
-  background: rgba(0, 0, 0, 0);
+  background: #CECECE;
   color: #1D1D1D;
   opacity: 1; }
 
