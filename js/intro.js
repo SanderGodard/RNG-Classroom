@@ -51,15 +51,24 @@ document.onkeyup = function (e) {
             playGame();
         }
     } else if (e.keyCode == 73 && e.target == document.body) {
-        console.log(sessionStorage.getItem("playIntro"));
         //i for å toggle intro
         if (sessionStorage.getItem("playIntro") == "true") {
-            console.log("den er ikke false")
             sessionStorage.setItem("playIntro", "false");
+            alert("Spiller ikke intro");
         } else {
-            console.log("den er false")
             sessionStorage.setItem("playIntro", "true");
+            alert("Spiller intro");
         }
-        console.log("etter: " + sessionStorage.getItem("playIntro"));
     }
+}
+
+alertDiv = document.createElement("div");
+
+function alert(text) {
+    alertDiv.style = "position: absolute; display: block; margin-left: 50%; padding: 10px; border: solid 1px black; top: 0px;"
+    alertDiv.innerHTML = text;
+    setTimeout(function () {
+        alertDiv.remove();
+    }, 3000);
+    document.body.appendChild(alertDiv);
 }
