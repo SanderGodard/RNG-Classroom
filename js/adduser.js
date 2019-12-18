@@ -20,28 +20,43 @@ function addUsers(userId) {
 }
 
 function newUser(userId) {
-    var userName = input.value
-    if (userName) {
-        userObj = {
-            name: userName,
-            value: 1,
-            text: "Gratulerer " + userName,
-            points: 0
-        };
-        userArray = JSON.parse(sessionStorage.getItem("usersList"));
-        userArray.push(userObj);
-        userJson = JSON.stringify(userArray);
+    userName = input.value
+    userArray = JSON.parse(sessionStorage.getItem("usersList"));
 
-        sessionStorage.setItem("usersList", userJson);
+    function checkName(array) {
+        if (array.name.toLowerCase() == userName.toLowerCase()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-        input.remove();
+    if (userArray.filter(checkName).length == 0) {
 
-        btn.innerHTML = "Flere som vil slite";
-        btn.setAttribute("onclick", "addUsers(" + (userArray.length) + ")");
-        document.location.reload();
+        if (userName) {
+            userObj = {
+                name: userName,
+                value: 1,
+                text: "Gratulerer " + userName,
+                points: 0
+            };
+            userArray.push(userObj);
+            userJson = JSON.stringify(userArray);
 
+            sessionStorage.setItem("usersList", userJson);
+
+            input.remove();
+
+            btn.innerHTML = "Flere som vil slite";
+            btn.setAttribute("onclick", "addUsers(" + (userArray.length) + ")");
+            document.location.reload();
+
+        } else {
+            window.alert("Wallah gjør det ordentlig a");
+        }
     } else {
-        window.alert("Wallah gjør det ordentlig a");
+        window.alert("Den finnes fra før, skjerp deg");
+        input.focus();
     }
 
 }
