@@ -8,7 +8,7 @@ function getQuote(hvem) {
   switch (hvem) {
     case "Josue": return "læl ikke norgesmester lengre";
       break;
-    case "Sander": return "Wannabe emo kid";
+    case "Sander": return "L";
       break;
     case "Anders KF": return "D mÅ vÆrE 37";
       break;
